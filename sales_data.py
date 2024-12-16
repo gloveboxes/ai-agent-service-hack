@@ -18,8 +18,7 @@ class SalesData:
         self.conn = None
 
     async def connect(self: "SalesData") -> None:
-        env = os.getenv("ENV", "development")
-        db_uri = f"file:{'src/' if env == 'development' else ''}{DATA_BASE}?mode=ro"
+        db_uri = f"file:{DATA_BASE}?mode=ro"
 
         try:
             self.conn = await aiosqlite.connect(db_uri, uri=True)
