@@ -46,7 +46,7 @@ class MyEventHandler(AsyncAgentEventHandler[str]):
                         tool_outputs.append(
                             ToolOutput(
                                 tool_call_id=tool_call.id,
-                                output=output,
+                                 output=output.json_format,
                             )
                         )
                     except Exception as e:
