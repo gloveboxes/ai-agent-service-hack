@@ -24,7 +24,8 @@ class MyEventHandler(AsyncAgentEventHandler[str]):
         super().__init__()
 
     async def on_message_delta(self, delta: "MessageDeltaChunk") -> None:
-        print(f"Text delta received: {delta.text}")
+        # print(f"Text delta received: {delta.text}")
+        print(delta.text, end="")
 
     async def on_thread_message(self, message: "ThreadMessage") -> None:
         print(f"ThreadMessage created. ID: {message.id}, Status: {message.status}")

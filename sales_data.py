@@ -110,6 +110,8 @@ class SalesData:
         :rtype: pd.DataFrame
         """
 
+        print(f"Executing query: {sqlite_query}")
+
         data_results = QueryResults()
 
         try:
